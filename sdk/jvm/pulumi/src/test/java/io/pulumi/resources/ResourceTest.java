@@ -67,7 +67,7 @@ public class ResourceTest {
             var resource = new CustomResource(
                     mod + ":a/b:c", "testResource", ResourceArgs.Empty,
                     CustomResourceOptions.builder()
-                            .setProvider(provider)
+                            .provider(provider)
                             .build()
             );
         }

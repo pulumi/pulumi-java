@@ -49,7 +49,7 @@ public class DeploymentResourceDependencyGatheringTest {
     public static class DeploysResourcesWithUnknownDependsOnStack extends Stack {
         public DeploysResourcesWithUnknownDependsOnStack() {
             var r = new MyCustomResource("r1", null, CustomResourceOptions.builder()
-                    .setDependsOn(OutputTests.unknown())
+                    .dependsOn(OutputTests.unknown())
                     .build()
             );
         }
