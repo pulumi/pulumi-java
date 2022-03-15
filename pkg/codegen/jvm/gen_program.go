@@ -29,6 +29,10 @@ func GenerateProgram(program *pcl.Program) (map[string][]byte, hcl.Diagnostics, 
 
 	// Import Java-specific schema info.
 	// FIXME
+	foo := program.Packages()
+	for _, a := range foo {
+		a.
+	}
 
 	g := &generator{
 		program: program,

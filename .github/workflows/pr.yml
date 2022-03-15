@@ -53,17 +53,22 @@ jobs:
         run: make build_go
       - name: Test Pulumi JVM Language Provider and Codegen
         run: make test_go
-      ###
-      - name: Build providers JVM SDK
-        run: |
-          make provider.random.build && make provider.random.install &&
-          make provider.azure-native.build && make provider.azure-native.install &&
-          make provider.google-native.build && make provider.google-native.install &&
-          make provider.gcp.build && make provider.gcp.install &&
-          make provider.aws.build && make provider.aws.install &&
-          make provider.aws-native.build && make provider.aws-native.install &&
-          make provider.kubernetes.build && make provider.kubernetes.install &&
-          make provider.docker.build && make provider.docker.install
+      - name: Build JVM SDK provider random
+        run: make provider.random.build provider.random.install
+      - name: Build JVM SDK provider azure-native
+        run: make provider.azure-native.build provider.azure-native.install
+      - name: Build JVM SDK provider google-native
+        run: make provider.google-native.build provider.google-native.install
+      - name: Build JVM SDK provider gcp
+        run: make provider.gcp.build provider.gcp.install
+      - name: Build JVM SDK provider aws
+        run: make provider.aws.build provider.aws.install
+      - name: Build JVM SDK provider aws-native
+        run: make provider.aws-native.build provider.aws-native.install
+      - name: Build JVM SDK provider kubernetes
+        run: make provider.kubernetes.build provider.kubernetes.install
+      - name: Build JVM SDK provider docker
+        run: make provider.docker.build provider.docker.install
       - name: Integration tests
         run: make integration_tests
     strategy:
@@ -301,11 +306,15 @@ jobs:
           bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
             cd tests/examples/minimal &&
             ./gradlew install &&
+            pulumi destroy -s dev --yes || true
             pulumi stack rm dev --yes || true
             pulumi stack init dev;
             pulumi config set minimal:name foo &&
             pulumi config set minimal:secret bar &&
-            pulumi preview"
+            pulumi preview
+            pulumi up -s dev --yes
+            pulumi destroy -s dev --yes || true
+            "
   example5:
     runs-on: ubuntu-latest
     steps:
@@ -482,9 +491,12 @@ jobs:
           bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
             cd tests/examples/random &&
             ./gradlew install &&
+            pulumi destroy -s dev --yes || true
             pulumi stack rm dev --yes || true
             pulumi stack init dev;
-            pulumi preview"
+            pulumi preview
+            pulumi up -s dev --yes
+            pulumi destroy -s dev --yes || true"
       - name: Integration tests
         run: make integration_tests
     strategy:
