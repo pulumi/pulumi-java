@@ -114,54 +114,54 @@ public class Alias {
         @Nullable
         private Output<String> parentUrn;
 
-        public Builder setName(@Nullable Output<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder setType(@Nullable Output<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder setStack(@Nullable Output<String> stack) {
+        public Builder stack(@Nullable Output<String> stack) {
             this.stack = stack;
             return this;
         }
 
-        public Builder setStack(@Nullable String stack) {
+        public Builder stack(@Nullable String stack) {
             this.stack = Output.ofNullable(stack);
             return this;
         }
 
-        public Builder setProject(@Nullable Output<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder setParent(@Nullable Resource parent) {
-            requireNullState(name, () -> "Alias should not specify Alias#parent when Alias#parentUrn is set already.");
+        public Builder parent(@Nullable Resource parent) {
+            requireNullState(name, () -> "Alias should not specify Alias#parent when Alias#parentUrn is  already.");
             this.parent = parent;
             return this;
         }
 
-        public Builder setParentUrn(@Nullable Output<String> parentUrn) {
-            requireNullState(name, () -> "Alias should not specify Alias#parentUrn when Alias#parent is set already.");
+        public Builder parentUrn(@Nullable Output<String> parentUrn) {
+            requireNullState(name, () -> "Alias should not specify Alias#parentUrn when Alias#parent is  already.");
             this.parentUrn = parentUrn;
             return this;
         }
