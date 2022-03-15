@@ -104,6 +104,8 @@ jobs:
           key: go-cache-${{ hashFiles('**/go.sum') }}
       - name: Ensure dependencies
         run: make ensure
+      - name: Publish Pulumi Java SDK to a local Maven repo
+        run: make install_sdk
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
       - name: Configure AWS Credentials
