@@ -2478,9 +2478,13 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 			if err := p.ImportLanguages(map[string]schema.Language{"jvm": Importer}); err != nil {
 				panic(err)
 			}
-			jvmInfo, ok := pkg.Language["jvm"].(PackageInfo)
-			if !ok {
-				panic("Failed to cast `pkg.Language[\"jvm\"]` to `PackageInfo`")
+
+			var jvmInfo PackageInfo
+			if raw, ok := pkg.Language["jvm"]; ok {
+				jvmInfo, ok = raw.(PackageInfo)
+				if !ok {
+					panic(fmt.Sprintf("Failed to cast `pkg.Language[\"jvm\"]`=%v to `PackageInfo`", raw))
+				}
 			}
 			info = &jvmInfo
 			infos[p] = info
